@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: omke
+  name: gfrdes
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: omke
+      app:gfrdes
   template:
     metadata:
       labels:
-        app: omke
+        app:gfrdes
     spec:
       containers:
-      - image: okteto.dev/omke:latest
-        name: omke
+      - image: okteto.dev/gfrdes:latest
+        name: gfrdes
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: Site
           value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
         - name: Vless_UUID
-          value: "394fe03d-289a-4dea-b9b5-0bed468260f3"
+          value: "c8a13923-789c-45f8-a3f1-ecb7b2a31521"
         - name: Vless_Path
-          value: "/394fe03d-289a-4dea-b9b5-0bed468260f3"
+          value: "/c8a13923-789c-45f8-a3f1-ecb7b2a31521"
         - name: Vmess_UUID
-          value: "5d293e61-305e-4003-ac87-4587b36646aa"
+          value: "7dc83690-c01e-4531-a775-08b3699d64a5"
         - name: Vmess_Path
-          value: "/5d293e61-305e-4003-ac87-4587b36646aa"
+          value: "/7dc83690-c01e-4531-a775-08b3699d64a5"
         - name: Share_Path
           value: "/v2link"
